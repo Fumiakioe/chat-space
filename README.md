@@ -1,9 +1,10 @@
 ##messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-image string
+|image|string|
 |user|references|null: false, foreign_key: true|
 |group|references|null: false, foreign_key: true|
+|text|text|
 ##Association
 belongs_to :group
 belongs_to :user
@@ -12,7 +13,7 @@ belongs_to :user
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, index: true|
-email|string|null: false, unique: true|
+|email|string|null: false, unique: true|
 ##Association
 has_many :groups_users
 has_many :groups, through: :groups_users
